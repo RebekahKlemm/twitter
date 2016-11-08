@@ -3,7 +3,6 @@ const volleyball = require('volleyball');
 const app = express(); // creates an instance of an express application
 
 
-
 app.listen(3000);
 console.log('server listening');
 
@@ -16,19 +15,19 @@ console.log('server listening');
 // })
 
 app.use(volleyball);
-    
 
-app.use(function(req, res, next){
+
+app.use(function (req, res, next) {
     console.log('request');
     next();
 })
 
-app.use('/special/', function(req, res, next){
+app.use('/special/', function (req, res, next) {
     console.log('you are in special');
     next();
 })
 
-app.post('/modernism', function(request, response){
+app.post('/modernism', function (request, response) {
     console.log('we are posting!');
 })
 
@@ -36,6 +35,6 @@ app.get('/', function (request, response) {
     response.send('hello world');
 })
 
-app.get('/news', function(request, response){
+app.get('/news', function (request, response) {
     response.send('this is the news page');
 })
