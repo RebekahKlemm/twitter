@@ -1,4 +1,5 @@
 const express = require('express');
+const volleyball = require('volleyball');
 const app = express(); // creates an instance of an express application
 
 
@@ -13,6 +14,9 @@ console.log('server listening');
 //     // call `next`, or else your app will be a black hole — receiving requests but never properly responding
 //     next();
 // })
+
+app.use(volleyball);
+    
 
 app.use(function(req, res, next){
     console.log('request');
@@ -29,7 +33,7 @@ app.post('/modernism', function(request, response){
 })
 
 app.get('/', function (request, response) {
-    response.send('hello world')
+    response.send('hello world');
 })
 
 app.get('/news', function(request, response){
