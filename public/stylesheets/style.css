@@ -57,3 +57,12 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+#tweet-name{
+  list-style: none;
+  font-weight: 800;
+}
+
+#tweeters{
+  padding: 10px;
+}

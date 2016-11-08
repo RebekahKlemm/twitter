@@ -9,6 +9,14 @@ router.get('/', function (req, res) {
   res.render( 'index', { tweets: tweets } );
 });
 
+router.get('/users/:name', function(req, res) {
+  var name = req.params.name;
+  var list = tweetBank.find( ['name', name] );
+  // console.log(find(['content', 'loves Fullstack']));
+  console.log(list);
+  res.render( 'index', { tweets: list } );
+});
+
 // router.get('/stylesheets/style.css', function(req, res){
 //   // fs.readFile('public/stylesheets/style.css', function(err, data) {
 //   //   res.setHeader('Content-Type', 'text/css');

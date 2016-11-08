@@ -35,7 +35,8 @@ for (let i = 0; i < 10; i++) {
     module.exports.add( getFakeName(), getFakeTweet() );
 }
 //
-// module.exports.add('Waseem', 'loves Fullstack');
+module.exports.add('Waseem', 'loves Fullstack');
+module.exports.add('Waseem', 'hates Fullstack');
 // console.log(data);
 //
 // console.log(find(['content', 'loves Fullstack']));
